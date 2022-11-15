@@ -1,4 +1,3 @@
-import Card from "./UI/Card.Js";
 import classes from "./SingleChoice.module.css";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 

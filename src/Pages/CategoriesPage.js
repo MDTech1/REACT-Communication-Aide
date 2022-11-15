@@ -17,12 +17,23 @@ function DisplayCategories(props) {
         return val.label === id;
       }).map((data, index) => {
         return (
-          <div className={classes.Options}>
+          <div className={classes.Options} key={data.label}>
             {data.additionalCategories.map((data2) => {
               return (
-                <Link to={`/Option/${data2.label}+${data.label}`} state="test">
-                  {<SingleChoice imgUrl={data2.imgUrl} label={data2.label} />}
-                </Link>
+                <div key={data2.label}>
+                  <Link
+                    to={`/Option/${data2.label}+${data.label}`}
+                    state="test"
+                  >
+                    {
+                      <SingleChoice
+                        imgUrl={data2.imgUrl}
+                        label={data2.label}
+                        key={data2.label}
+                      />
+                    }
+                  </Link>
+                </div>
               );
             })}
           </div>

@@ -13,9 +13,15 @@ function HomePage() {
       <div className={classes.Options}>
         {Data.map((data) => {
           return (
-            <div>
+            <div key={data.label}>
               <Link to={`/Categories/${data.label}`}>
-                {<SingleChoice imgUrl={data.imgUrl} label={data.label} />}
+                {
+                  <SingleChoice
+                    imgUrl={data.imgUrl}
+                    label={data.label}
+                    key={data.label}
+                  />
+                }
               </Link>
             </div>
           );
