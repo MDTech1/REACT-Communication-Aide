@@ -1,0 +1,11 @@
+.Main {
+  text-align: center;
+  border: 1px 1px 1px 0 black;
+  background-color: #ececec;
+  padding-top: 10px;
+}
+
+.Options {
+  display: flex;
+  flex-wrap: wrap;
+}
